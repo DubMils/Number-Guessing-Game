@@ -2,10 +2,10 @@ import tkinter as tk
 from tkinter import messagebox
 import random
 
-class GuessNumberGame:
+class NumberGuessingGame:
     def __init__(self, root):
         self.root = root
-        self.root.title("Guess the Number Game")
+        self.root.title("Number Guessing Game")
 
         self.secret_number = random.randint(1, 100)
         self.guess_count = 0
@@ -50,10 +50,10 @@ class GuessNumberGame:
         self.entry.delete(0, tk.END)
         self.label.config(text="Guess the number (between 1 and 100):")
 
-def main():
-    root = tk.Tk()
-    game = GuessNumberGame(root)
-    root.mainloop()
 
-if __name__ == "__main__":
-    main()
+root = tk.Tk()
+game = NumberGuessingGame(root)
+root.mainloop()
+
+NumberGuessingGame()
+
